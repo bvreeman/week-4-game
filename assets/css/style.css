@@ -1,0 +1,36 @@
+body {
+    background-image: url(../images/whitediamond.png);
+    background-position: center;
+    background-repeat: repeat;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+}
+
+header img {
+    display: flex;
+    justify-content: center;
+    clear: both;
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+    flex-shrink: 4;
+}
+
+.panel {
+    margin-top: 30px;
+}
+
+.panel-default > .panel-heading-custom {
+    background-image: none;
+    background-color: aqua;
+}
+
+.panel-body {
+    background-color: aquamarine;
+}
