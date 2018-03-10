@@ -40,7 +40,7 @@
                         <br>
                         <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
                         <br>
-                        <p>You win the gae by matching your total score to a random number. You lose the game if your total score goes above the random number.</p>
+                        <p>You win the game by matching your total score to a random number. You lose the game if your total score goes above the random number.</p>
                         <br>
                         <p>The value of each crystal is hidden from you until you click on it.</p>
                         <br>
@@ -51,38 +51,56 @@
             <div class="row">
                 <div class="col-md-6 col-xs-12">
                     <div class="row">
-                        <div class="col-md-8 col-xs-12">
-                            <div class="number_box">
-                                <div class="number"></div>
+                        <div class="gameBox">
+                            <div class="col-md-6 col-xs-6">
+                                <div class="number_box">
+                                    <span id="randomNumber"></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12">
-                            <div class="win_loss">
-                                <div class="wins"></div>
-                                <br>
-                                <div class="losses"></div>
+                            <div class="col-md-3 col-md-3-offset col-xs-6">
+                                <div class="win_loss">
+                                    <p>Wins:</p>
+                                        <span id="winning"></span>
+                                    <br>
+                                    <br>
+                                    <p>Losses:</p>
+                                        <span id="losing"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class = "row">
-                        <div class="col-md-6 col-xs-6">
-                                <img class="img-responsive game_button" src="./assets/images/jewel.png" alt="Jewel Image Holding a random number value">
+                        <div class="col-md-4 col-xs-6">
+                                <img class="img-responsive game_button button1" src="./assets/images/jewel.png" alt="Jewel Image Holding a random number value">
                         </div>
-                        <div class="col-md-6 col-xs-6">
-                            <img class="img-responsive game_button" src="./assets/images/diamond2.png" alt="Jewel Image Holding a random number value">
+                        <div class="col-md-4 col-md-4-offset col-xs-6">
+                            <img class="img-responsive game_button button2" src="./assets/images/diamond2.png" alt="Jewel Image Holding a random number value">
                         </div>
                     </div>
                     <div class = "row">
-                        <div class="col-md-6 col-xs-6">
-                                <img class="img-responsive game_button" src="./assets/images/diamond3.png" alt="Jewel Image Holding a random number value">
+                        <div class="col-md-4 col-xs-6">
+                            <img class="img-responsive game_button button3" src="./assets/images/diamond3.png" alt="Jewel Image Holding a random number value">
                         </div>
-                        <div class="col-md-6 col-xs-6">
-                            <img class="img-responsive game_button" src="./assets/images/ruby.png" alt="Jewel Image Holding a random number value">
+                        <div class="col-md-4 col-md-4-offset col-xs-6">
+                            <img class="img-responsive game_button button4" src="./assets/images/ruby.png" alt="Jewel Image Holding a random number value">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading panel-heading-custom">Your total score is:</div>
+                    <div class="panel-body">
+                        <span class = "yourScore"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script src="./assets/javascript/game.js"></script>
 </body>
 </html>
