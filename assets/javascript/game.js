@@ -1,9 +1,8 @@
 'use strict';
+let randomNumber = Math.floor(Math.random()*102+19)
 
 $(document).ready(function() {
-    let randomNumber = Math.floor(Math.random()*102+19)
-
-    $('#randomNumber').text(randomNumber);
+    $('.randomNumber').text(randomNumber);
 
 
 });
@@ -17,20 +16,81 @@ let wins = 0
 let losses = 0
 
 
-$('#button1').on('click', function(){
+$('.button1').click(function(){
     totalValue = totalValue + value1;
-    $('#yourScore').text(totalValue);
-    if(totalValue === randomNumber){
+    $('.yourScore').text(totalValue);
+    if(totalValue == randomNumber){
         alert('You won!');
         wins++
-        $('#winning').text(wins);
+        $('.winning').text(wins);
+        reset();
     } else if (totalValue > randomNumber){
         alert('You lose!')
         losses++
-        $('#losing').text(losses);
+        $('.losing').text(losses);
+        reset();
     }
+    console.log(value1);
 });
 
+$('.button2').click(function(){
+    totalValue = totalValue + value2;
+    $('.yourScore').text(totalValue);
+    if(totalValue == randomNumber){
+        alert('You won!');
+        wins++
+        $('.winning').text(wins);
+        reset();
+    } else if (totalValue > randomNumber){
+        alert('You lose!')
+        losses++
+        $('.losing').text(losses);
+        reset();
+    }
+    console.log(value2);
+});
 
-// document.getElementById("demo").innerHTML =
-// Math.floor(Math.random() * 100) + 1;
+$('.button3').click(function(){
+    totalValue = totalValue + value3;
+    $('.yourScore').text(totalValue);
+    if(totalValue == randomNumber){
+        alert('You won!');
+        wins++
+        $('.winning').text(wins);
+        reset();
+    } else if (totalValue > randomNumber){
+        alert('You lose!')
+        losses++
+        $('.losing').text(losses);
+        reset();
+    }
+    console.log(value3);
+});
+
+$('.button4').click(function(){
+    totalValue = totalValue + value4;
+    $('.yourScore').text(totalValue);
+    if(totalValue == randomNumber){
+        alert('You won!');
+        wins++
+        $('.winning').text(wins);
+        reset();
+    } else if (totalValue > randomNumber){
+        alert('You lose!')
+        losses++
+        $('.losing').text(losses);
+        reset();
+    }
+    console.log(value4);
+});
+
+function reset(){
+    randomNumber = Math.floor(Math.random()*102+19)
+    $('.randomNumber').text(randomNumber);
+    value1 = Math.floor(Math.random()*12+1)
+    value2 = Math.floor(Math.random()*12+1)
+    value3 = Math.floor(Math.random()*12+1)
+    value4 = Math.floor(Math.random()*12+1)
+    totalValue = 0
+
+}
